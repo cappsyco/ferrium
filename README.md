@@ -1,2 +1,2 @@
-# Cosmic Rust Developer Experience (RDX)
-## Built on Universal Blue
+# COSMIC - Rust Developer Experience (RDX)
+### Built on Universal Blue
