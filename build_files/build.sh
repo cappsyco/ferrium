@@ -9,8 +9,12 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
-dnf5 install -y tmux 
+# COSMIC desktop
+dnf5 -y copr enable ryanabx/cosmic-epoch
+dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
+dnf5 -y copr disable ryanabx/cosmic-epoch
+
+dnf5 clean all
 
 # Use a COPR Example:
 #
