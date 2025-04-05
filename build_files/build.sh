@@ -16,11 +16,14 @@ dnf5 -y copr enable atim/ubuntu-fonts
 ### COSMIC
 dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
 
-### Install packages
+### DNF packages
 while read -r package
 do
     dnf5 -y install $package
 done < "/ctx/packages.txt"
+
+### Manual installs
+curl -f https://zed.dev/install.sh | sh
 
 ### Disable repos
 dnf5 -y copr disable ublue-os/staging
