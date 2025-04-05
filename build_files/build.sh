@@ -10,7 +10,6 @@ dnf5 -y copr enable gmaglione/podman-bootc
 dnf5 -y copr enable che/nerd-fonts
 dnf5 -y copr enable atim/ubuntu-fonts
 
-
 ### COSMIC
 dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
 
