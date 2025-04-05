@@ -18,7 +18,7 @@ dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
 while read -r package
 do
   echo "dnf5 -y install $package"
-done < "packages.txt"
+done < "/ctx/packages.txt"
 
 ### Disable repos
 
