@@ -1,0 +1,6 @@
+fastfetch
+gh
+jetbrains-mono-fonts-all
+nerd-fonts
+nmtui
+rustup

@@ -1,2 +1,2 @@
-# COSMIC - Rust Developer Experience (RDX)
-### Built on Universal Blue
+# Ferrium 
+### A COSMIC desktop based operating system, built on Universal Blue and Fedora Aromic, designed with development in mind.
