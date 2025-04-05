@@ -21,3 +21,5 @@ topgrade
 ublue-brew
 ublue-bling
 ubuntu-family-fonts
+wl-clipboard
+
