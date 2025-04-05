@@ -15,7 +15,7 @@ dnf5 -y copr enable che/nerd-fonts
 dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
 
 # Packages from core list
-cat build_files/packages.txt | while read package || [[ -n $package ]];
+cat /tmp/packages.txt | while read package || [[ -n $package ]];
 do
    dnf5 -y install $package
 done
