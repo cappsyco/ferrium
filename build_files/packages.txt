@@ -1,5 +1,3 @@
-containerd.io
-devpod
 docker-ce
 docker-ce-cli
 docker-buildx-plugin
@@ -21,7 +19,6 @@ podman-machine
 podman-tui
 podmansh
 powerline-fonts
-python3-ramalama
 rustup
 tailscale
 topgrade
