@@ -2,9 +2,8 @@
 
 set -ouex pipefail
 
-### System files and overrides
+### System files
 cp -avf "/ctx/system_files/." /
-cp -avf "/ctx/system_files_overrides/." /
 
 ### Enable repos
 dnf5 -y copr enable ublue-os/staging
