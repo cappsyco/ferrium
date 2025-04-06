@@ -23,7 +23,7 @@ do
 done < "/ctx/packages.txt"
 
 ### Manual installs
-curl -f https://zed.dev/install.sh | sh
+#curl -f https://zed.dev/install.sh | sh
 
 ### Disable repos
 dnf5 -y copr disable ublue-os/staging
