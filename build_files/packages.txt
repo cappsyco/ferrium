@@ -17,6 +17,7 @@ podman-tui
 podmansh
 powerline-fonts
 rustup
+rust-xkbcommon-devel
 tailscale
 topgrade
 ublue-brew
