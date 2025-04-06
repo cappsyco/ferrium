@@ -10,6 +10,7 @@ mozilla-fira-mono-fonts
 nerd-fonts
 nmtui
 osbuild-selinux
+pipewire-libs
 podman-bootc
 podman-compose
 podman-machine
@@ -22,5 +23,3 @@ tailscale
 topgrade
 ublue-brew
 ublue-bling
-ubuntu-family-fonts
-zed
