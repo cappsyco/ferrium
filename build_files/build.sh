@@ -19,7 +19,9 @@ dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
 ### DNF packages
 while read -r package
 do
-    dnf5 -y install $package
+    if [[ $package ]]; then
+        dnf5 -y install $package
+    fi
 done < "/ctx/packages.txt"
 
 ### Manual installs
