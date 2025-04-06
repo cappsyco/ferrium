@@ -23,3 +23,4 @@ topgrade
 ublue-brew
 ublue-bling
 ubuntu-family-fonts
+zed
