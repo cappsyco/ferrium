@@ -16,7 +16,9 @@ tailscale
 ublue-brew
 ublue-bling
 
+
 cargo
-pipewire-libs
-rustup
+rust-clang-sys-devel
+rust-pipewire-devel
 rust-xkbcommon-devel
+rustup
