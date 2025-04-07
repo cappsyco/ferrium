@@ -1,7 +1,7 @@
 FROM scratch as context
 
 COPY system_files /system_files
-COPY build_scripts /build_scripts
+COPY build_files /build_files
 
 ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
 FROM quay.io/fedora-ostree-desktops/cosmic-atomic:$MAJOR_VERSION
