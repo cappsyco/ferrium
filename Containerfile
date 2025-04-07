@@ -4,7 +4,7 @@ COPY system_files /system_files
 COPY build_files /build_files
 
 ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
-FROM quay.io/fedora-ostree-desktops/cosmic-atomic:$MAJOR_VERSION
+FROM quay.io/fedora-ostree-desktops/cosmic-atomic:41
 #FROM ghcr.io/ublue-os/base-main:latest
 
 ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
