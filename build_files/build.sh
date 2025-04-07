@@ -21,7 +21,7 @@ do
     if [[ $package ]]; then
         dnf5 -y install $package
     fi
-done < "/ctx/packages.txt"
+done < "/ctx/build_files/packages.txt"
 
 ### Manual installs
 
