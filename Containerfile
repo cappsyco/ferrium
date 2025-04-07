@@ -1,32 +1,16 @@
-# Allow build scripts to be referenced without being copied into the final image
-FROM scratch AS ctx
-COPY build_files /
+FROM scratch as context
+
 COPY system_files /system_files
+COPY build_scripts /build_scripts
 
-# Base Image
-FROM ghcr.io/ublue-os/base-main:latest
+ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
+FROM quay.io/fedora-ostree-desktops/cosmic-atomic:$MAJOR_VERSION
+#FROM ghcr.io/ublue-os/base-main:latest
 
-## Other possible base images include:
-# FROM ghcr.io/ublue-os/bazzite:latest
-# FROM ghcr.io/ublue-os/bluefin-nvidia:stable
-#
-# ... and so on, here are more base images
-# Universal Blue Images: https://github.com/orgs/ublue-os/packages
-# Fedora base image: quay.io/fedora/fedora-bootc:41
-# CentOS base images: quay.io/centos-bootc/centos-bootc:stream10
+ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
+ARG IMAGE_VENDOR="${IMAGE_VENDOR:-cappsyco}"
 
-### MODIFICATIONS
-## make modifications desired in your image and install packages by modifying the build.sh script
-## the following RUN directive does all the things required to run "build.sh" as recommended.
-
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
-    --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
-    --mount=type=tmpfs,dst=/tmp \
-    /ctx/build.sh && \
-    ostree container commit
-
-### LINTING
-## Verify final image and contents are correct.
-## This can be quite sensitive, so it's disabled by default.
-# RUN bootc container lint
+RUN --mount=type=tmpfs,dst=/opt \
+  --mount=type=tmpfs,dst=/tmp \
+  --mount=type=bind,from=context,source=/,target=/run/context \
+  /run/context/build_scripts/build.sh
