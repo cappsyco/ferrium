@@ -3,7 +3,7 @@
 set -ouex pipefail
 
 ### System files
-cp -avf "/ctx/files/." /
+#cp -avf "/ctx/files/." /
 
 ### Enable repos
 dnf5 -y copr enable ublue-os/staging
