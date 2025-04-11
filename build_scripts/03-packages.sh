@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+set -ouex pipefail
+
 ### Enable repos
 dnf5 -y copr enable ublue-os/staging
 dnf5 -y copr enable ublue-os/packages
