@@ -6,6 +6,10 @@ A Universal Blue and Fedora Atomic operating system, built around the COSMIC des
 ```sh
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium:latest
 ```
+or
+```sh
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/cappsyco/ferrium:latest
+```
 
 ### Current status
 This OS image is still heavilt in flux and is currently setup to be a bare minium implementation of the Fedora Atomic image for the COSMIC desktop, packaged with the standard ublue tools.
