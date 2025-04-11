@@ -1,5 +1,5 @@
 ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
-FROM scratch as context
+FROM scratch as ctx
 
 COPY system_files /files
 #COPY system_files_overrides /overrides
