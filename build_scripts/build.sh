@@ -8,12 +8,8 @@ cp -avf "/ctx/system_files/." /
 ### Enable repos
 dnf5 -y copr enable ublue-os/staging
 dnf5 -y copr enable ublue-os/packages
-dnf5 -y copr enable ryanabx/cosmic-epoch
 dnf5 -y copr enable gmaglione/podman-bootc
 dnf5 -y copr enable che/nerd-fonts
-
-### COSMIC
-dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
 
 ### DNF packages
 while read -r package
@@ -39,7 +35,6 @@ echo 'eval "$(starship init bash)"' >> /etc/bashrc
 ### Disable repos
 dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable ublue-os/packages
-dnf5 -y copr disable ryanabx/cosmic-epoch
 dnf5 -y copr disable gmaglione/podman-bootc
 dnf5 -y copr disable che/nerd-fonts
 

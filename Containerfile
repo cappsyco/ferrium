@@ -1,20 +1,24 @@
-# Allow build scripts to be referenced without being copied into the final image
-FROM scratch AS ctx
-COPY build_files /build_files
-COPY system_files /system_files
+ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
+FROM scratch as context
 
-# Base Image
-#FROM ghcr.io/ublue-os/base-main:latest
-FROM quay.io/fedora-ostree-desktops/cosmic-atomic:41
+COPY system_files /files
+COPY system_files_overrides /overrides
+COPY build_scripts /build_scripts
 
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
-    --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
-    --mount=type=tmpfs,dst=/tmp \
-    /ctx/build_files/build.sh && \
-    ostree container commit
+ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
+FROM quay.io/fedora-ostree-desktops/cosmic-atomic:$MAJOR_VERSION
 
-### LINTING
-## Verify final image and contents are correct.
-## This can be quite sensitive, so it's disabled by default.
-# RUN bootc container lint
+ARG ENABLE_DX="${ENABLE_DX:-0}"
+ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
+ARG IMAGE_VENDOR="${IMAGE_VENDOR:-cappsyco}"
+
+RUN --mount=type=tmpfs,dst=/opt \
+  --mount=type=tmpfs,dst=/tmp \
+  --mount=type=tmpfs,dst=/var \
+  --mount=type=tmpfs,dst=/boot \
+  --mount=type=bind,from=context,source=/,target=/run/context \
+  /run/context/build_scripts/build.sh
+
+# Makes `/opt` writeable by default
+# Needs to be here to make the main image build strict (no /opt there)
+RUN rm -rf /opt && ln -s /var/opt /opt
