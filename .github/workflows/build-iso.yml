@@ -22,3 +22,13 @@ jobs:
           image_tag: latest
           version: 41
           iso_name: ${{ matrix.image }}-latest.iso
+
+      - name: Upload ISOs and Checksum to Job Artifacts
+        if: inputs.upload-to-s3 != true && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          path: ${{ steps.build.outputs.output-directory }}
+          if-no-files-found: error
+          retention-days: 0
+          compression-level: 0
+          overwrite: true
