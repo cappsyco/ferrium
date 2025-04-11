@@ -3,7 +3,7 @@
 set -ouex pipefail
 
 ### Run sub-scripts
-source /ctx/build_scripts/01-files.sh
-source /ctx/build_scripts/02-info.sh
-source /ctx/build_scripts/03-packages.sh
-source /ctx/build_scripts/04-clean.sh
+"${realpath /ctx/build_scripts/01-start.sh}"
+"${realpath /ctx/build_scripts/02-info.sh}"
+"${realpath /ctx/build_scripts/03-packages.sh}"
+"${realpath /ctx/build_scripts/04-end.sh}"

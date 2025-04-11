@@ -2,12 +2,6 @@
 
 set -ouex pipefail
 
-### Enable repos
-dnf5 -y copr enable ublue-os/staging
-dnf5 -y copr enable ublue-os/packages
-dnf5 -y copr enable gmaglione/podman-bootc
-dnf5 -y copr enable che/nerd-fonts
-
 ### DNF packages
 while read -r package
 do
@@ -28,15 +22,3 @@ curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/re
 tar -xzf /tmp/starship.tar.gz -C /tmp
 install -c -m 0755 /tmp/starship /usr/bin
 echo 'eval "$(starship init bash)"' >> /etc/bashrc
-
-### Disable repos
-dnf5 -y copr disable ublue-os/staging
-dnf5 -y copr disable ublue-os/packages
-dnf5 -y copr disable gmaglione/podman-bootc
-dnf5 -y copr disable che/nerd-fonts
-
-### Clean-up
-dnf5 clean all
-
-### Flatpaks
-flatpak remote-add --system flathub https://flathub.org/repo/flathub.flatpakrepo
