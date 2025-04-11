@@ -11,6 +11,9 @@ dnf5 -y copr disable che/nerd-fonts
 ### Flatpaks
 flatpak remote-add --system flathub https://flathub.org/repo/flathub.flatpakrepo
 
+### Services
+systemctl --global preset-all
+
 ### Clean-up
 dnf5 clean all
 rm -rf /.gitkeep
