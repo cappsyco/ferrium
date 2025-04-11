@@ -1,3 +1,11 @@
+ublue-os-just
+ublue-os-luks
+ublue-os-signing
+ublue-os-udev-rules
+ublue-os-update-services
+ublue-{motd,fastfetch,bling,rebase-helper,setup-services,polkit-rules}
+uupd
+
 fastfetch
 flatpak-builder
 genisoimage
