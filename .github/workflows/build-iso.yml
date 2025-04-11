@@ -1,4 +1,4 @@
-name: generate-iso
+name: Generate ISO
 on:
   workflow_dispatch:
 
