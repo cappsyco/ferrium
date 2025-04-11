@@ -2,7 +2,7 @@ ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
 FROM scratch as context
 
 COPY system_files /files
-COPY system_files_overrides /overrides
+#COPY system_files_overrides /overrides
 COPY build_scripts /build_scripts
 
 ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
