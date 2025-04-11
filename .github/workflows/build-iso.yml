@@ -25,7 +25,6 @@ on:
 
 env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository }}"
-  IMAGE_NAME: "ferrium"
   DEFAULT_TAG: "latest"
 
 concurrency:
