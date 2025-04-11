@@ -3,7 +3,10 @@ ublue-os-luks
 ublue-os-signing
 ublue-os-udev-rules
 ublue-os-update-services
-ublue-{motd,fastfetch,bling,rebase-helper,setup-services,polkit-rules}
+ublue-motd
+ublue-rebase-helper
+ublue setup-services
+ublue-polkit-rules
 uupd
 
 fastfetch
