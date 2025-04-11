@@ -1,3 +1,4 @@
+ublue-os-fastfetch
 ublue-os-just
 ublue-os-luks
 ublue-os-signing
@@ -7,9 +8,10 @@ ublue-motd
 ublue-rebase-helper
 ublue-setup-services
 ublue-polkit-rules
+ublue-brew
+ublue-bling
 uupd
 
-fastfetch
 flatpak-builder
 genisoimage
 gh
@@ -24,7 +26,5 @@ podman-tui
 podmansh
 powerline-fonts
 tailscale
-ublue-brew
-ublue-bling
 cargo
 rustup

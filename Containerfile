@@ -2,13 +2,10 @@ ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
 FROM scratch as ctx
 
 COPY system_files /files
-#COPY system_files_overrides /overrides
 COPY build_scripts /build_scripts
 
-ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
 FROM quay.io/fedora-ostree-desktops/cosmic-atomic:$MAJOR_VERSION
 
-ARG ENABLE_DX="${ENABLE_DX:-0}"
 ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
 ARG IMAGE_VENDOR="${IMAGE_VENDOR:-cappsyco}"
 
