@@ -19,7 +19,7 @@ on:
 
 env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository }}"
-  DEFAULT_TAG: "41"
+  DEFAULT_TAG: "latest"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
