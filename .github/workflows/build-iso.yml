@@ -13,13 +13,13 @@ on:
     branches:
       - main
     paths:
-      - './iso.toml'
-      - './.github/workflows/build-iso.yml'
-      - './Justfile'
+      - "./iso.toml"
+      - "./.github/workflows/build-iso.yml"
+      - "./Justfile"
 
 env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository }}"
-  DEFAULT_TAG: "latest"
+  DEFAULT_TAG: "41"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
@@ -29,8 +29,6 @@ jobs:
   build:
     name: Build ISOs
     runs-on: ${{ inputs.platform == 'amd64' && 'ubuntu-24.04' || 'ubuntu-24.04-arm' }}
-    strategy:
-      fail-fast: false
     permissions:
       contents: read
       packages: read
@@ -40,7 +38,7 @@ jobs:
       - name: lower case the image registry in case of any capitalization
         run: |
           echo "IMAGE_REGISTRY=${IMAGE_REGISTRY,,}" >> ${GITHUB_ENV}
-      
+
       - name: Install dependencies
         if: inputs.platform == 'arm64'
         run: |
