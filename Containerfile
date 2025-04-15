@@ -1,4 +1,4 @@
-ARG MAJOR_VERSION="${MAJOR_VERSION:-41}"
+ARG MAJOR_VERSION="${MAJOR_VERSION:-42}"
 FROM scratch as ctx
 
 COPY system_files /files
