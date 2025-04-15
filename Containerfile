@@ -5,9 +5,6 @@ COPY build_scripts /build_scripts
 
 FROM quay.io/fedora-ostree-desktops/cosmic-atomic:42
 
-ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
-ARG IMAGE_VENDOR="${IMAGE_VENDOR:-cappsyco}"
-
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
