@@ -1,10 +1,9 @@
-ARG MAJOR_VERSION="${MAJOR_VERSION:-42}"
 FROM scratch as ctx
 
 COPY system_files /files
 COPY build_scripts /build_scripts
 
-FROM quay.io/fedora-ostree-desktops/cosmic-atomic:$MAJOR_VERSION
+FROM quay.io/fedora-ostree-desktops/cosmic-atomic:42
 
 ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
 ARG IMAGE_VENDOR="${IMAGE_VENDOR:-cappsyco}"
