@@ -3,7 +3,7 @@ FROM scratch as ctx
 COPY system_files /files
 COPY build_scripts /build_scripts
 
-FROM quay.io/fedora-ostree-desktops/cosmic-atomic:42
+FROM ghcr.io/ublue-os/cosmic-atomic-main:latest
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
