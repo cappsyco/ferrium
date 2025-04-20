@@ -1,7 +1,7 @@
-export repo_organization := env("GITHUB_REPOSITORY_OWNER", "cappsyco")
-export image_name := env("IMAGE_NAME", "ferrium")
+export repo_organization := env("GITHUB_REPOSITORY_OWNER", "yourname")
+export image_name := env("IMAGE_NAME", "yourimage")
 export centos_version := env("CENTOS_VERSION", "stream10")
-export fedora_version := env("CENTOS_VERSION", "42")
+export fedora_version := env("CENTOS_VERSION", "41")
 export default_tag := env("DEFAULT_TAG", "latest")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
 
@@ -109,7 +109,7 @@ build $target_image=image_name $tag=default_tag $dx="0" $hwe="0" $gdx="0":
     ver="${tag}-${centos_version}.$(date +%Y%m%d)"
 
     BUILD_ARGS=()
-    BUILD_ARGS+=("--build-arg" "MAJOR_VERSION=${fedora_version}")
+    BUILD_ARGS+=("--build-arg" "MAJOR_VERSION=${centos_version}")
     BUILD_ARGS+=("--build-arg" "IMAGE_NAME=${target_image}")
     BUILD_ARGS+=("--build-arg" "IMAGE_VENDOR=${repo_organization}")
     BUILD_ARGS+=("--build-arg" "ENABLE_DX=${dx}")
@@ -289,9 +289,8 @@ _run-vm $target_image $tag $type $config:
     run_args+=(docker.io/qemux/qemu-docker)
 
     # Run the VM and open the browser to connect
-    podman run "${run_args[@]}" &
-    xdg-open http://localhost:${port}
-    fg "%podman"
+    (sleep 30 && xdg-open http://localhost:"$port") &
+    podman run "${run_args[@]}"
 
 # Run a virtual machine from a QCOW2 image
 [group('Run Virtal Machine')]
