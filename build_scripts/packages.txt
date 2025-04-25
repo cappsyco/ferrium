@@ -28,3 +28,5 @@ devpod
 # rust / cosmic dev dependancies
 rustup
 cargo
+libxkbcommon-devel
+libseat-devel
