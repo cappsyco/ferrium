@@ -18,6 +18,10 @@ ublue-setup-services
 uupd
 topgrade
 
+# fonts
+jetbrains-mono-fonts-all,
+nerd-fonts
+
 # containers
 devpod
 
