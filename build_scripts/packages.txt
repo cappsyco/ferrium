@@ -18,7 +18,7 @@ uupd
 topgrade
 
 # standard applications
-zen-browser
+#zen-browser
 
 # fonts
 jetbrains-mono-fonts-all
