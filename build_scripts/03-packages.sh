@@ -5,7 +5,7 @@ set -ouex pipefail
 ### DNF packages
 while read -r package
 do
-    if [[ $package ]]; then
+    if [[ $package ]] && [[ ${package:0:1} != "#" ]]; then
         dnf5 -y install $package
     fi
 done < "/ctx/build_scripts/packages.txt"
