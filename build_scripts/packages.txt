@@ -1,4 +1,4 @@
-devpod
+# ublue
 fwupd
 kcm_ublue
 ublue-bling
@@ -17,3 +17,10 @@ ublue-recipes
 ublue-setup-services
 uupd
 topgrade
+
+# containers
+devpod
+
+# rust / cosmic dev dependancies
+rustup
+cargo
