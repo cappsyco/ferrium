@@ -17,6 +17,10 @@ curl --retry 3 -Lo /tmp/zed-linux-x86_64.tar.gz "https://zed.dev/api/releases/st
 tar -xvf /tmp/zed-linux-x86_64.tar.gz -C /usr
 ln -sf /usr/zed.app/bin/zed /usr/bin/zed
 
+#cp /usr/zed.app/share/applications/zed.desktop ~/.local/share/applications/dev.zed.Zed.desktop
+#sed -i "s|Icon=zed|Icon=$HOME/.local/zed.app/share/icons/hicolor/512x512/apps/zed.png|g" ~/.local/share/applications/dev.zed.Zed.desktop
+#sed -i "s|Exec=zed|Exec=$HOME/.local/zed.app/libexec/zed-editor|g" ~/.local/share/applications/dev.zed.Zed.desktop
+
 # Starship Shell Prompt
 curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz"
 tar -xzf /tmp/starship.tar.gz -C /tmp
