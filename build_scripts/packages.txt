@@ -19,7 +19,7 @@ uupd
 topgrade
 
 # fonts
-jetbrains-mono-fonts-all,
+jetbrains-mono-fonts-all
 nerd-fonts
 
 # containers
