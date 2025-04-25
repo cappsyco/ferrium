@@ -1,7 +1,6 @@
 # ublue
 fwupd
 kcm_ublue
-ublue-bling
 ublue-brew
 ublue-fastfetch
 ublue-motd
@@ -18,6 +17,9 @@ ublue-setup-services
 uupd
 topgrade
 
+# standard applications
+zen-browser
+
 # fonts
 jetbrains-mono-fonts-all
 nerd-fonts
@@ -30,3 +32,4 @@ rustup
 cargo
 libxkbcommon-devel
 libseat-devel
+rust-pipewire-devel
