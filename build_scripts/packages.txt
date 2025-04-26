@@ -3,7 +3,6 @@ fwupd
 kcm_ublue
 ublue-brew
 ublue-fastfetch
-ublue-motd
 ublue-os-just
 ublue-os-luks
 ublue-os-media-automount-udev
