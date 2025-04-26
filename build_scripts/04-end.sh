@@ -12,7 +12,7 @@ dnf5 -y copr disable che/nerd-fonts
 ### Flatpaks
 mkdir -p /etc/flatpak/remotes.d
 curl --retry 3 -o /etc/flatpak/remotes.d/flathub.flatpakrepo "https://dl.flathub.org/repo/flathub.flatpakrepo"
-flatpak remote-delete fedora
+systemctl disable flatpak-add-fedora-repos.service
 
 ### Services
 systemctl --global preset-all
