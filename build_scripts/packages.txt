@@ -25,7 +25,7 @@ flatpak-builder
 genisoimage
 
 # [DX] containers
-containerd
+containerd.io
 docker-ce
 docker-ce-cli
 docker-buildx-plugin
