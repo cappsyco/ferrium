@@ -12,10 +12,6 @@ done < "/ctx/build_scripts/packages.txt"
 
 ### Manual installs
 
-# Zen Browser
-wget "https://copr.fedorainfracloud.org/coprs/sneexy/zen-browser/repo/fedora-$(rpm -E %fedora)/sneexy-zen-browsder-fedora-$(rpm -E %fedora).repo" -O "/etc/yum.repos.d/_copr_sneexy-zen-browser.repo"
-rpm-ostree -y install zen-browser
-
 # Zed editor install
 curl --retry 3 -Lo /tmp/zed-linux-x86_64.tar.gz "https://zed.dev/api/releases/stable/latest/zed-linux-x86_64.tar.gz"
 tar -xvf /tmp/zed-linux-x86_64.tar.gz -C /usr
