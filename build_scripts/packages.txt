@@ -75,3 +75,4 @@ libseat-devel
 rust-libdbus-sys-devel
 rust-libudev-devel
 rust-pipewire-devel
+rust-input-devel
