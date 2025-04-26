@@ -16,9 +16,12 @@ ublue-setup-services
 uupd
 topgrade
 
-# [BASE] fonts
+# [BASE] tools / fonts
+gh
 jetbrains-mono-fonts-all
 nerd-fonts
+oddjob-mkhomedir
+tailscale
 
 # [DX] general dev
 flatpak-builder
