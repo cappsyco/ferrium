@@ -1,0 +1,16 @@
+install-system-flatpaks:
+    #!/usr/bin/env bash
+    print "Nothing here yet!"
+    flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+    xargs flatpak --system -y install --or-update < /etc/ublue-os/system-flatpaks.list
+
+#alias switch-stream := rebase-helper
+#alias switch-streams := rebase-helper
+#alias rollback-helper := rebase-helper
+alias devmode := toggle-devmode
+
+#rebase-helper:
+#    /usr/libexec/ublue-rebase-helper
+
+toggle-devmode:
+    /usr/libexec/ublue-dx-helper

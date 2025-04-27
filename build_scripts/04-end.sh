@@ -19,6 +19,11 @@ systemctl disable flatpak-add-fedora-repos.service
 
 ### Services
 systemctl --global preset-all
+systemctl enable sshd
+if [[ $ENABLE_DX == "1" ]]; then
+    systemctl enable podman
+    systemctl enable docker
+fi
 
 ### Clean-up
 dnf5 clean all
