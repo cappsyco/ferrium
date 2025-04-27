@@ -3,113 +3,151 @@
   "logo": {
     "type": "file",
     "source": "/usr/share/ublue-os/ferrium-logo.ansi",
-    "color": {
-      "1": "94",
-      "2": "95",
-      "3": "91",
-      "4": "97",
-    },
   },
   "display": {
-    "separator": "  ",
-    "color": {
-      "keys": "38;2;87;160;198",
-    },
+    "separator": " -> ",
+    "constants": [
+      "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€",
+    ],
   },
   "modules": [
     {
-      "type": "title",
-      "key": "",
-      "color": {
-        "user": "38;2;87;160;198",
-        "at": "white",
-        "host": "bright_green",
-      },
+      "type": "custom",
+      "format": "â”Œ{$1}ï†’{$1}â”",
+      "outputColor": "90",
     },
-    "break",
     {
-      "type": "command",
-      "key": "󱋩",
-      "text": "/usr/libexec/ublue-image-info.sh",
+      "type": "title",
+      "keyWidth": 10,
+    },
+    {
+      "type": "custom",
+      "format": "â””{$1}ï†’{$1}â”˜",
+      "outputColor": "90",
+    },
+    {
+      "type": "custom",
+      "format": " {#90}ï†’  {#31}ï†’  {#32}ï†’  {#33}ï†’  {#34}ï†’  {#35}ï†’  {#36}ï†’  {#37}ï†’  {#38}ï†’  {#39}ï†’     ï†’  {#38}ï†’  {#37}ï†’  {#36}ï†’  {#35}ï†’  {#34}ï†’  {#33}ï†’  {#32}ï†’  {#31}ï†’  {#90}ï†’",
+    },
+    {
+      "type": "custom",
+      "format": "â”Œ{$1}ï†’{$1}â”",
+      "outputColor": "90",
     },
     {
       "type": "os",
-      "key": "󰣛",
-      "format": "{pretty-name}",
+      "key": "{icon} OS",
+      "keyColor": "yellow",
     },
     {
       "type": "kernel",
-      "key": "",
-      "format": "{1} {2}",
-    },
-    {
-      "type": "uptime",
-      "key": "󰅐",
-    },
-    {
-      "type": "command",
-      "key": "󰔠",
-      "text": "date -d$(ls -alct / --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
-      "shell": "/bin/bash",
-    },
-    "break",
-    {
-      "type": "host",
-      "key": "󰾰",
-    },
-    {
-      "type": "cpu",
-      "key": "󰻠",
-    },
-    {
-      "type": "gpu",
-      "key": "󰍛",
-    },
-    {
-      "type": "memory",
-      "key": "󰧑",
-    },
-    {
-      "type": "disk",
-      "key": "",
-    },
-    {
-      "type": "display",
-      "key": "󰍹",
-    },
-    {
-      "type": "battery",
-      "key": "",
-    },
-    {
-      "type": "gamepad",
-      "key": "󰖺",
-    },
-    "break",
-    {
-      "type": "de",
-      "key": "󰕮",
-    },
-    {
-      "type": "wm",
-      "key": "",
-    },
-    {
-      "type": "shell",
-      "key": "",
-    },
-    {
-      "type": "terminal",
-      "key": "",
+      "key": "â”‚ â”œï€“",
+      "keyColor": "yellow",
     },
     {
       "type": "packages",
-      "key": "󰏖",
+      "key": "â”‚ â”œó°–",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "shell",
+      "key": "â”‚ â””ï’‰",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "wm",
+      "key": "ï’ˆ DE/WM",
+      "keyColor": "blue",
+    },
+    {
+      "type": "lm",
+      "key": "â”‚ â”œó°§¨",
+      "keyColor": "blue",
+    },
+    {
+      "type": "wmtheme",
+      "key": "â”‚ â”œó°‰¼",
+      "keyColor": "blue",
+    },
+    {
+      "type": "icons",
+      "key": "â”‚ â”œó°€»",
+      "keyColor": "blue",
+    },
+    {
+      "type": "terminal",
+      "key": "â”‚ â”œîž•",
+      "keyColor": "blue",
+    },
+    {
+      "type": "wallpaper",
+      "key": "â”‚ â””ó°¸‰",
+      "keyColor": "blue",
+    },
+    {
+      "type": "host",
+      "key": "ó°Œ¢ PC",
+      "keyColor": "green",
+    },
+    {
+      "type": "cpu",
+      "key": "â”‚ â”œó°» ",
+      "keyColor": "green",
+    },
+    {
+      "type": "gpu",
+      "key": "â”‚ â”œó°›",
+      "keyColor": "green",
+    },
+    {
+      "type": "disk",
+      "key": "â”‚ â”œï‚ ",
+      "keyColor": "green",
+    },
+    {
+      "type": "memory",
+      "key": "â”‚ â”œó°‘­",
+      "keyColor": "green",
+    },
+    {
+      "type": "swap",
+      "key": "â”‚ â”œó°“¡",
+      "keyColor": "green",
+    },
+    {
+      "type": "uptime",
+      "key": "â”‚ â”œó°…",
+      "keyColor": "green",
+    },
+    {
+      "type": "display",
+      "key": "â”‚ â””ó°¹",
+      "keyColor": "green",
+    },
+    {
+      "type": "sound",
+      "key": "ï€¨ SND",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "player",
+      "key": "â”‚ â”œó°¥ ",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "media",
+      "key": "â”‚ â””ó°š",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "custom",
+      "format": "â””{$1}ï†’{$1}â”˜",
+      "outputColor": "90",
     },
     "break",
     {
-      "type": "colors",
-      "paddingLeft": 2,
+      "type": "custom",
+      "format": " {#90}ï†’  {#31}ï†’  {#32}ï†’  {#33}ï†’  {#34}ï†’  {#35}ï†’  {#36}ï†’  {#37}ï†’  {#38}ï†’  {#39}ï†’     ï†’  {#38}ï†’  {#37}ï†’  {#36}ï†’  {#35}ï†’  {#34}ï†’  {#33}ï†’  {#32}ï†’  {#31}ï†’  {#90}ï†’",
     },
   ],
 }
