@@ -84,6 +84,8 @@ jobs:
       - name: Build Image
         id: build_image
         uses: redhat-actions/buildah-build@7a95fa7ee0f02d552a32753e7414641a04307056 # v2
+        build_args:
+            ENABLE_DX: "1"
         with:
           containerfiles: |
             ./Containerfile
@@ -92,8 +94,6 @@ jobs:
           image: ${{ env.IMAGE_NAME }}
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
-          build_args:
-            ENABLE_DX: 1
           oci: false
 
       # Rechunk is a script that we use on Universal Blue to make sure there isnt a single huge layer when your image gets published.
