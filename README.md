@@ -14,7 +14,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium:latest
 ```
 
 ### Ferrium DX
-The developer experience, including tools for container focused dev, the [Zed development environment](https://zed.dev/) and a full suite of tools to enable Rust and [COSMIC desktop and app](https://github.com/pop-os/cosmic-epoch) development. This is the main vision for the OS, giving a ready to go environment for all things COSMIC.
+The developer experience, including tools for container focused dev, the [Zed development environment](https://zed.dev/) and a full suite of tools and dependencies to enable Rust and [COSMIC desktop and app](https://github.com/pop-os/cosmic-epoch) development. This is the main vision for the OS, giving a ready to go environment for all things COSMIC.
 #### Rebase to ferrium-dx
 ```sh
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium-dx:latest
