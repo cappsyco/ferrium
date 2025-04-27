@@ -19,4 +19,4 @@ jobs:
     secrets: inherit
     with:
       image-name: ferrium-dx
-      enable_dx: 1
+      dx: 1
