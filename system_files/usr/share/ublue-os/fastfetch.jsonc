@@ -3,11 +3,10 @@
   "logo": {
     "type": "file",
     "source": "/usr/share/ublue-os/ferrium-logo.ansi",
-    }
   },
   "display": {
     "separator": "  ",
-    "color": "38;2;53;132;228"
+    "color": "38;2;53;132;228",
   },
   "modules": [
     "title",
@@ -38,6 +37,6 @@
     "poweradapter",
     "locale",
     "break",
-    "colors"
-  ]
+    "colors",
+  ],
 }
