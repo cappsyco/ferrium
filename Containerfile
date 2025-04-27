@@ -9,7 +9,7 @@ COPY build_scripts /build_scripts
 
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
-ARG ENABLE_DX="${ENABLE_DX:-1}"
+ARG ENABLE_DX="${ENABLE_DX:-0}"
 ARG IMAGE_NAME="ferrium"
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
