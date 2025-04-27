@@ -1,5 +1,5 @@
 # Ferrium 
-A Universal Blue and Fedora Atomic operating system, built around the COSMIC desktop, designed with development in mind.
+A [Universal Blue](https://universal-blue.org/) and [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) operating system, built around the [COSMIC desktop](https://system76.com/cosmic/).
 
 ## Images
 ### Ferrium Base
@@ -13,7 +13,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium:latest
 ```
 
 ### Ferrium DX
-The developer experience, including tools for container focused dev, the [Zed development environment](https://zed.dev/) and a full suite of tools to enable Rust and [COSMIC desktop and app](https://github.com/pop-os/cosmic-epoch) development.
+The developer experience, including tools for container focused dev, the [Zed development environment](https://zed.dev/) and a full suite of tools to enable Rust and [COSMIC desktop and app](https://github.com/pop-os/cosmic-epoch) development. This is the main vision for the OS, giving a ready to go environment for all things COSMIC.
 #### Rebase to ferrium-dx
 ```sh
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium-dx:latest
@@ -27,8 +27,9 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/cappsyco/ferrium-dx:latest
 This OS image is still heavily in flux and isn't suitable for production as changes and breakages are happening all the time. 
 
 ### To do...
-* Define some mildly opinionated desktop settings / theme choices
-* Define default Flatpaks
+* Setup default Flatpaks
+* Apply some mildly opinionated desktop settings / theme choices
+* Pre-package Zed with appropriate extensions to help working with containers etc.
 * A million other things I don't know enough to know that I need to do yet
 
 ### Help!
