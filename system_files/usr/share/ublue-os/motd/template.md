@@ -2,7 +2,7 @@
 
 󱋩 `%IMAGE_NAME%:%IMAGE_TAG%`
 
-| Command | Description |
+|  Command |  Description |
 | ------- | ----------- |
 | `ujust --choose`  |  Show available commands  |
 | `ujust toggle-user-motd` |  Toggle this banner on/off |
