@@ -1,6 +1,8 @@
 # Ferrium 
 A [Universal Blue](https://universal-blue.org/) and [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) operating system, built around the [COSMIC desktop](https://system76.com/cosmic/).
 
+![Screenshot_2025-04-27_19-03-50](https://github.com/user-attachments/assets/1883efaa-27a6-4386-b72e-caf671064ecb)
+
 ## Images
 ### Ferrium Base
 Base image with most of the uBlue bells and whistles. 
@@ -23,7 +25,6 @@ or
 ```sh
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/cappsyco/ferrium-dx:latest
 ```
-![Screenshot_2025-04-27_19-03-50](https://github.com/user-attachments/assets/1883efaa-27a6-4386-b72e-caf671064ecb)
 
 ## Current status
 This OS image is still heavily in flux and isn't suitable for production as changes and breakages are happening all the time. 
