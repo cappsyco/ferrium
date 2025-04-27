@@ -3,7 +3,6 @@
 set -ouex pipefail
 
 IMAGE_VENDOR="cappsyco"
-IMAGE_NAME="ferrium"
 IMAGE_PRETTY_NAME="Ferrium"
 IMAGE_LIKE="fedora"
 HOME_URL="https://github.com/cappsyco/ferrium"
