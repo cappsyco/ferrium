@@ -7,24 +7,10 @@ FROM scratch as ctx
 COPY system_files /files
 COPY build_scripts /build_scripts
 
-## base image
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
+ARG ENABLE_DX="${ENABLE_DX:-0}"
 ARG IMAGE_NAME="ferrium"
-ARG IMAGE_FLAVOUR=""
-
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
-    --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
-    --mount=type=tmpfs,dst=/tmp \
-    /ctx/build_scripts/build.sh && \
-    ostree container commit
-
-## dx image
-FROM base AS dx
-
-ARG IMAGE_NAME="ferrium-dx"
-ARG IMAGE_FLAVOUR="-dx"
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
