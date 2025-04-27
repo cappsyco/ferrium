@@ -3,151 +3,41 @@
   "logo": {
     "type": "file",
     "source": "/usr/share/ublue-os/ferrium-logo.ansi",
+    }
   },
   "display": {
-    "separator": " -> ",
-    "constants": [
-      "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€",
-    ],
+    "separator": "  ",
+    "color": "38;2;53;132;228"
   },
   "modules": [
-    {
-      "type": "custom",
-      "format": "â”Œ{$1}ï†’{$1}â”",
-      "outputColor": "90",
-    },
-    {
-      "type": "title",
-      "keyWidth": 10,
-    },
-    {
-      "type": "custom",
-      "format": "â””{$1}ï†’{$1}â”˜",
-      "outputColor": "90",
-    },
-    {
-      "type": "custom",
-      "format": " {#90}ï†’  {#31}ï†’  {#32}ï†’  {#33}ï†’  {#34}ï†’  {#35}ï†’  {#36}ï†’  {#37}ï†’  {#38}ï†’  {#39}ï†’     ï†’  {#38}ï†’  {#37}ï†’  {#36}ï†’  {#35}ï†’  {#34}ï†’  {#33}ï†’  {#32}ï†’  {#31}ï†’  {#90}ï†’",
-    },
-    {
-      "type": "custom",
-      "format": "â”Œ{$1}ï†’{$1}â”",
-      "outputColor": "90",
-    },
-    {
-      "type": "os",
-      "key": "{icon} OS",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "kernel",
-      "key": "â”‚ â”œï€“",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "packages",
-      "key": "â”‚ â”œó°–",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "shell",
-      "key": "â”‚ â””ï’‰",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "wm",
-      "key": "ï’ˆ DE/WM",
-      "keyColor": "blue",
-    },
-    {
-      "type": "lm",
-      "key": "â”‚ â”œó°§¨",
-      "keyColor": "blue",
-    },
-    {
-      "type": "wmtheme",
-      "key": "â”‚ â”œó°‰¼",
-      "keyColor": "blue",
-    },
-    {
-      "type": "icons",
-      "key": "â”‚ â”œó°€»",
-      "keyColor": "blue",
-    },
-    {
-      "type": "terminal",
-      "key": "â”‚ â”œîž•",
-      "keyColor": "blue",
-    },
-    {
-      "type": "wallpaper",
-      "key": "â”‚ â””ó°¸‰",
-      "keyColor": "blue",
-    },
-    {
-      "type": "host",
-      "key": "ó°Œ¢ PC",
-      "keyColor": "green",
-    },
-    {
-      "type": "cpu",
-      "key": "â”‚ â”œó°» ",
-      "keyColor": "green",
-    },
-    {
-      "type": "gpu",
-      "key": "â”‚ â”œó°›",
-      "keyColor": "green",
-    },
-    {
-      "type": "disk",
-      "key": "â”‚ â”œï‚ ",
-      "keyColor": "green",
-    },
-    {
-      "type": "memory",
-      "key": "â”‚ â”œó°‘­",
-      "keyColor": "green",
-    },
-    {
-      "type": "swap",
-      "key": "â”‚ â”œó°“¡",
-      "keyColor": "green",
-    },
-    {
-      "type": "uptime",
-      "key": "â”‚ â”œó°…",
-      "keyColor": "green",
-    },
-    {
-      "type": "display",
-      "key": "â”‚ â””ó°¹",
-      "keyColor": "green",
-    },
-    {
-      "type": "sound",
-      "key": "ï€¨ SND",
-      "keyColor": "cyan",
-    },
-    {
-      "type": "player",
-      "key": "â”‚ â”œó°¥ ",
-      "keyColor": "cyan",
-    },
-    {
-      "type": "media",
-      "key": "â”‚ â””ó°š",
-      "keyColor": "cyan",
-    },
-    {
-      "type": "custom",
-      "format": "â””{$1}ï†’{$1}â”˜",
-      "outputColor": "90",
-    },
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    "localip",
+    "battery",
+    "poweradapter",
+    "locale",
     "break",
-    {
-      "type": "custom",
-      "format": " {#90}ï†’  {#31}ï†’  {#32}ï†’  {#33}ï†’  {#34}ï†’  {#35}ï†’  {#36}ï†’  {#37}ï†’  {#38}ï†’  {#39}ï†’     ï†’  {#38}ï†’  {#37}ï†’  {#36}ï†’  {#35}ï†’  {#34}ï†’  {#33}ï†’  {#32}ï†’  {#31}ï†’  {#90}ï†’",
-    },
-  ],
+    "colors"
+  ]
 }
