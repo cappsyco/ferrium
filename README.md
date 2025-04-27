@@ -23,6 +23,7 @@ or
 ```sh
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/cappsyco/ferrium-dx:latest
 ```
+![Screenshot_2025-04-27_19-03-50](https://github.com/user-attachments/assets/1883efaa-27a6-4386-b72e-caf671064ecb)
 
 ## Current status
 This OS image is still heavily in flux and isn't suitable for production as changes and breakages are happening all the time. 
