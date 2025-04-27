@@ -8,6 +8,7 @@ Base image with most of the uBlue bells and whistles.
 ```sh
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/cappsyco/ferrium:latest
 ```
+or
 ```sh
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium:latest
 ```
