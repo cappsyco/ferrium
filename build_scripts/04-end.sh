@@ -17,9 +17,6 @@ mkdir -p /etc/flatpak/remotes.d
 curl --retry 3 -o /etc/flatpak/remotes.d/flathub.flatpakrepo "https://dl.flathub.org/repo/flathub.flatpakrepo"
 systemctl disable flatpak-add-fedora-repos.service
 
-### Remove nvidia options from ujust for now
-rm /usr/share/ublue-os/just/40-nvidia.just
-
 ### Services
 systemctl --global preset-all
 systemctl enable sshd
