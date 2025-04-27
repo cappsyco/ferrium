@@ -11,6 +11,7 @@ COPY build_scripts /build_scripts
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
 ARG IMAGE_NAME="ferrium"
+ARG IMAGE_FLAVOUR=""
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
@@ -23,6 +24,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 FROM base AS dx
 
 ARG IMAGE_NAME="ferrium-dx"
+ARG IMAGE_FLAVOUR="-dx"
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \

@@ -3,12 +3,14 @@
 set -xeuo pipefail
 
 ### Disable repos
-dnf5 -y copr disable ublue-os/staging
-dnf5 -y copr disable ublue-os/packages
-dnf5 -y copr disable sneexy/zen-browser
-dnf5 -y copr disable gmaglione/podman-bootc
-dnf5 -y copr disable ganto/umoci
-dnf5 -y copr disable che/nerd-fonts
+if [[ $IMAGE_FLAVOUR == "-dx" ]]; then
+    dnf5 -y copr disable gmaglione/podman-bootc
+    dnf5 -y copr disable ganto/umoci
+else
+    dnf5 -y copr disable ublue-os/staging
+    dnf5 -y copr disable ublue-os/packages
+    dnf5 -y copr disable che/nerd-fonts
+fi
 
 ### Flatpaks
 mkdir -p /etc/flatpak/remotes.d

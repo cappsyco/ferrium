@@ -8,14 +8,15 @@ do
     if [[ $package ]] && [[ ${package:0:1} != "#" ]]; then
         dnf5 -y install $package
     fi
-done < "/ctx/build_scripts/packages.txt"
+done < "/ctx/build_scripts/packages$IMAGE_FLAVOUR.txt"
 
 ### Manual installs
-
-# Zed editor install
-curl --retry 3 -Lo /tmp/zed-linux-x86_64.tar.gz "https://zed.dev/api/releases/stable/latest/zed-linux-x86_64.tar.gz"
-tar -xvf /tmp/zed-linux-x86_64.tar.gz -C /usr
-ln -sf /usr/zed.app/bin/zed /usr/bin/zed
+if [[ $IMAGE_FLAVOUR == "-dx" ]]; then
+    # Zed editor install
+    curl --retry 3 -Lo /tmp/zed-linux-x86_64.tar.gz "https://zed.dev/api/releases/stable/latest/zed-linux-x86_64.tar.gz"
+    tar -xvf /tmp/zed-linux-x86_64.tar.gz -C /usr
+    ln -sf /usr/zed.app/bin/zed /usr/bin/zed
+fi
 
 # Zed editor .desktop files
 cp /usr/zed.app/share/applications/zed.desktop /usr/share/applications/dev.zed.Zed.desktop
