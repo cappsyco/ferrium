@@ -1,7 +1,7 @@
 install-system-flatpaks:
     #!/usr/bin/env bash
     flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
-    xargs flatpak --system -y install --or-update < /etc/ublue-os/system-flatpaks.list
+    xargs flatpak --system -y install --or-update < /etc/ublue-os/flatpaks/system.list
 
 #alias switch-stream := rebase-helper
 #alias switch-streams := rebase-helper
