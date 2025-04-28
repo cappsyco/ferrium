@@ -23,7 +23,7 @@ cat >$IMAGE_INFO <<EOF
   "image-name": "$IMAGE_NAME",
   "image-vendor": "$IMAGE_VENDOR",
   "image-ref": "$IMAGE_REF",
-  "image-tag":"latest",
+  "image-tag": "$UBLUE_IMAGE_TAG",
   "base-image-name": "$BASE_IMAGE",
   "fedora-version": "$FEDORA_MAJOR_VERSION"
 }
