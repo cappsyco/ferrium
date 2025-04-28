@@ -4,13 +4,14 @@ ARG FEDORA_MAJOR_VERSION="42"
 ARG UBLUE_IMAGE_TAG="latest"
 ARG SOURCE_IMAGE="${BASE_IMAGE_NAME}-main"
 ARG BASE_IMAGE="ghcr.io/ublue-os/${SOURCE_IMAGE}"
-ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
-ARG ENABLE_DX="${ENABLE_DX:-0}"
 
 FROM scratch as ctx
 
 COPY system_files /files
 COPY build_scripts /build_scripts
+
+ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
+ARG ENABLE_DX="${ENABLE_DX:-0}"
 
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
