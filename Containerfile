@@ -10,10 +10,10 @@ FROM scratch as ctx
 COPY system_files /files
 COPY build_scripts /build_scripts
 
+FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
+
 ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
 ARG ENABLE_DX="${ENABLE_DX:-0}"
-
-FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
