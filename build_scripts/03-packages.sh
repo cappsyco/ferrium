@@ -22,6 +22,11 @@ if [[ $ENABLE_DX == "1" ]]; then
     done < "/ctx/build_scripts/packages-dx.txt"
 fi
 
+# Remove packages
+dnf5 -y remove firefox-langpacks
+dnf5 -y remove firefox
+
+
 ### Manual installs
 
 # Starship Shell Prompt
