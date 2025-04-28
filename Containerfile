@@ -1,7 +1,6 @@
 
 ARG BASE_IMAGE_NAME="cosmic-atomic"
 ARG FEDORA_MAJOR_VERSION="42"
-ARG UBLUE_IMAGE_TAG="latest"
 ARG SOURCE_IMAGE="${BASE_IMAGE_NAME}-main"
 ARG BASE_IMAGE="ghcr.io/ublue-os/${SOURCE_IMAGE}"
 
@@ -13,6 +12,7 @@ COPY build_scripts /build_scripts
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
 ARG IMAGE_NAME="${IMAGE_NAME:-ferrium}"
+ARG UBLUE_IMAGE_TAG="latest"
 ARG ENABLE_DX="${ENABLE_DX:-0}"
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
