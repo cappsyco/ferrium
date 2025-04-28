@@ -17,7 +17,10 @@ jobs:
           image_tag: latest
           version: 42
           variant: Server
-          iso_name: ${{ env.IMAGE_NAME }}-${{ env.VERSION }}.iso
+          iso_name: ferrium-42-base.iso
+          flatpak_remote_name: flathub
+          flatpak_remote_url: https://flathub.org/repo/flathub.flatpakrepo
+          flatpak_remote_refs_dir: ${{ github.workspace }}/system_files/etc/ublue-os
 
       - name: Upload ISO as artifact
         id: upload
