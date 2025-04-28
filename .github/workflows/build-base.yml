@@ -4,9 +4,11 @@ on:
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - "**.md"
   schedule:
-    - cron: "05 10 * * *" # 10:05am UTC everyday
-  merge_group:
+    - cron: "05 12 * * *" # 12:05am UTC everyday
+  workflow_call:
   workflow_dispatch:
 
 concurrency:
