@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - "**.md"
   schedule:
-    - cron: "06 03 * * *" # 12:05am UTC everyday
+    - cron: "06 03 * * *" # 03:06am UTC everyday
   workflow_call:
   workflow_dispatch:
 
