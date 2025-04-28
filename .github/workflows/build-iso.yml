@@ -6,25 +6,7 @@ jobs:
   iso:
     name: Create and Upload ISO
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        image:
-          - ferrium
-          - ferrium-dx
     steps:
-      - name: Build ISO
-        uses: jasonn3/build-container-installer@main
-        id: iso
-        with:
-          arch: x86_64
-          image_name: ${{ matrix.image }}
-          image_repo: ghcr.io/cappsyco
-          image_tag: latest
-          version: 42
-          iso_name: ${{ matrix.image }}-latest.iso
-          variant: kinoite
-
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
         id: build
