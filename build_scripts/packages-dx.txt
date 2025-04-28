@@ -38,6 +38,7 @@ rustup
 cargo
 libxkbcommon-devel
 libseat-devel
+lld-devel
 rust-libdbus-sys-devel
 rust-libudev-devel
 rust-pipewire-devel
