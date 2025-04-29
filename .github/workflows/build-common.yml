@@ -18,6 +18,7 @@ env:
   IMAGE_DESC: "Ferrium - A Universal Blue and COSMIC desktop Image"
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
   ENABLE_DX: "${{ inputs.dx }}"
+  DEFAULT_TAG: "latest"
   ARTIFACTHUB_LOGO_URL: "https://avatars.githubusercontent.com/u/120078124?s=200&v=4"
 
 concurrency:
