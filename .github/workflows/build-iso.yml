@@ -22,7 +22,8 @@ jobs:
           image_repo: ghcr.io/cappsyco
           image_tag: latest
           version: 42
-          variant: Server
+          variant: Desktop
+          web_ui: true,
           iso_name: ${{ matrix.image }}.iso
 
       - name: Upload ISO as artifact
