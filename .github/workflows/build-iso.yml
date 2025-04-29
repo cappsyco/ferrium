@@ -24,9 +24,6 @@ jobs:
           version: 42
           variant: Server
           iso_name: ${{ matrix.image }}.iso
-          flatpak_remote_name: flathub
-          flatpak_remote_url: https://flathub.org/repo/flathub.flatpakrepo
-          flatpak_remote_refs_dir: ${{ github.workspace }}/system_files/etc/ublue-os/flatpaks
 
       - name: Upload ISO as artifact
         id: upload
