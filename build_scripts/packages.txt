@@ -19,6 +19,7 @@ topgrade
 
 # [BASE] tools / fonts
 gh
+file-roller
 jetbrains-mono-fonts-all
 nerd-fonts
 oddjob-mkhomedir
