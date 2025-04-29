@@ -6,6 +6,7 @@ com.github.tchx84.Flatseal
 com.ranfdev.DistroShelf
 io.missioncenter.MissionCenter
 org.gnome.Calendar
+org.gnome.FileRoller
 org.gnome.Loupe
 org.mozilla.firefox
 org.mozilla.Thunderbird
