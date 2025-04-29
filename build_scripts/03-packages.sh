@@ -24,8 +24,6 @@ fi
 
 # Remove packages
 dnf5 -y remove ark
-dnf5 -y remove firefox-langpacks
-dnf5 -y remove firefox
 
 
 ### Manual installs
