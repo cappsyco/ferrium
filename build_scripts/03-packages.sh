@@ -23,6 +23,7 @@ if [[ $ENABLE_DX == "1" ]]; then
 fi
 
 # Remove packages
+dnf5 -y remove ark
 dnf5 -y remove firefox-langpacks
 dnf5 -y remove firefox
 
