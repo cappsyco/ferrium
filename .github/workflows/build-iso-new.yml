@@ -92,14 +92,14 @@ jobs:
           flatpak_remote_refs_dir: ${{ steps.flatpak-dependencies.outputs.FLATPAK_REFS_DIR }}
           enable_flatpak_dependencies: false
 
-      - name: Upload ISOs and Checksum to Job Artifacts
+      - name: Upload ISO as artifact
+        id: upload
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.image_name }}-${{ env.IMAGE_TAG }}
+          name: ${{ steps.build.outputs.iso_name }}
           path: |
             ${{ steps.build.outputs.iso_path }}
             ${{ steps.build.outputs.iso_path }}-CHECKSUM
           if-no-files-found: error
-          retention-days: 0
+          retention-days: 1
           compression-level: 0
-          overwrite: true
