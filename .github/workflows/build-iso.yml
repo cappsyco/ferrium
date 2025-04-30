@@ -11,7 +11,7 @@ jobs:
       matrix:
         image:
           - ferrium
-          #- ferrium-dx
+          - ferrium-dx
     steps:
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
