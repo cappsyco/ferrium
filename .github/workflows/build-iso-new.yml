@@ -22,7 +22,7 @@ jobs:
         image_name: [ferrium, ferrium-dx]
         fedora_version: [42]
     env:
-      IMAGE_TAG: ${{ matrix.fedora_version }}-amd64
+      IMAGE_TAG: latest
       IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
     steps:
