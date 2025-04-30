@@ -25,9 +25,7 @@ jobs:
           variant: cosmic
           secure_boot_key_url: "https://github.com/ublue-os/akmods/raw/main/certs/public_key.der"
           enrollment_password: "universalblue"
-          #flatpak_remote_name: flathub
-          #flatpak_remote_url: https://flathub.org/repo/flathub.flatpakrepo
-          #flatpak_remote_refs_dir: /github/workspace/flatpak_refs
+          flatpak_remote_refs_dir: ./system_files/etc/ublue-os/flatpaks/system.list
           iso_name: ${{ matrix.image }}.iso
 
       - name: Upload ISO as artifact
