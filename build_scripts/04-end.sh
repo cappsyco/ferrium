@@ -17,8 +17,8 @@ systemctl --global preset-all
 systemctl --global enable ublue-flatpak-manager.service
 systemctl enable sshd
 if [[ $ENABLE_DX == "1" ]]; then
-    systemctl enable podman
-    systemctl enable docker
+    systemctl enable podman.socket
+    systemctl enable docker.socket
 fi
 
 ### Flatpaks

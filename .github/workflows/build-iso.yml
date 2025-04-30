@@ -29,53 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Get Flatpak dependencies
-        id: flatpak-dependencies
-        env:
-          IMAGE_FULL: ${{ env.IMAGE_REGISTRY }}/${{ matrix.image_name }}:${{ env.IMAGE_TAG }}
-        shell: bash
-        run: |
-          set -euox pipefail
-
-          IMAGE="${IMAGE_FULL}"
-
-          # Create temporary directory
-          TEMP_FLATPAK_INSTALL_DIR=$(mktemp -d -p /tmp flatpak-XXXXXX)
-          FLATPAK_REFS_DIR=./flatpak-refs
-          FLATPAK_REFS_DIR_ABS=$(realpath "${FLATPAK_REFS_DIR}")
-          mkdir -p "${FLATPAK_REFS_DIR}"
-          mv system_files/etc/ublue-os/flatpaks/system.list "${FLATPAK_REFS_DIR_ABS}/flatpaks.txt"
-
-          # Read the list of Flatpak packages from the manifest
-          FLATPAK_REFS=()
-          while IFS= read -r line; do
-            FLATPAK_REFS+=("$line")
-          done < "${FLATPAK_REFS_DIR}/flatpaks.txt"
-
-          echo "Flatpak refs: ${FLATPAK_REFS[@]}"
-
-          # Generate installation script
-          cat <<EOF > "${TEMP_FLATPAK_INSTALL_DIR}/install-flatpaks.sh"
-          mkdir -p /flatpak/flatpak /flatpak/triggers
-          mkdir /var/tmp
-          chmod -R 1777 /var/tmp
-          flatpak config --system --set languages "*"
-          flatpak remote-add --system flathub https://flathub.org/repo/flathub.flatpakrepo
-          flatpak install --system -y flathub ${FLATPAK_REFS[@]}
-          ostree refs --repo=\${FLATPAK_SYSTEM_DIR}/repo | grep '^deploy/' | grep -v 'org\.freedesktop\.Platform\.openh264' | sed 's/^deploy\///g' > /output/flatpaks-with-deps
-          EOF
-          docker run --rm --privileged \
-            --entrypoint /bin/bash \
-            -e FLATPAK_SYSTEM_DIR=/flatpak/flatpak \
-            -e FLATPAK_TRIGGERS_DIR=/flatpak/triggers \
-            -v ${FLATPAK_REFS_DIR_ABS}:/output \
-            -v ${TEMP_FLATPAK_INSTALL_DIR}:/temp_flatpak_install_dir \
-            ${IMAGE} /temp_flatpak_install_dir/install-flatpaks.sh
-          docker rmi ${IMAGE}
-          cat ${FLATPAK_REFS_DIR}/flatpaks-with-deps
-
-          echo "FLATPAK_REFS_DIR=${FLATPAK_REFS_DIR}" >> $GITHUB_OUTPUT
-
       - name: Build ISOs
         uses: jasonn3/build-container-installer@v1.2.3
         id: build
@@ -89,8 +42,6 @@ jobs:
           image_tag: ${{ env.IMAGE_TAG }}
           secure_boot_key_url: "https://github.com/ublue-os/akmods/raw/main/certs/public_key.der"
           enrollment_password: "universalblue"
-          flatpak_remote_refs_dir: ${{ steps.flatpak-dependencies.outputs.FLATPAK_REFS_DIR }}
-          enable_flatpak_dependencies: false
 
       - name: Upload ISO as artifact
         id: upload
