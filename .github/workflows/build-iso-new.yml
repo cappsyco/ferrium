@@ -49,7 +49,7 @@ jobs:
           # Read the list of Flatpak packages from the manifest
           FLATPAK_REFS=()
           while IFS= read -r line; do
-            FLATPAK_REFS+=("app/$line/x86_64/stable")
+            FLATPAK_REFS+=("$line")
           done < "${FLATPAK_REFS_DIR}/flatpaks.txt"
 
           echo "Flatpak refs: ${FLATPAK_REFS[@]}"
