@@ -14,7 +14,6 @@ dnf5 -y copr disable che/nerd-fonts
 
 ### Services
 systemctl --global preset-all
-systemctl --global enable ublue-flatpak-manager.service
 systemctl enable sshd
 
 if [[ $ENABLE_DX == "1" ]]; then
