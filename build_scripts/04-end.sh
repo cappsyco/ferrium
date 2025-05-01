@@ -16,7 +16,9 @@ dnf5 -y copr disable che/nerd-fonts
 systemctl --global preset-all
 systemctl --global enable ublue-flatpak-manager.service
 systemctl enable sshd
+
 if [[ $ENABLE_DX == "1" ]]; then
+    systemctl enable ferrium-dx-groups.service
     systemctl enable podman.socket
     systemctl enable docker.socket
 fi

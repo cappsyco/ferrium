@@ -3,7 +3,10 @@
 set -ouex pipefail
 
 ### System files
-cp -r /ctx/files/. /
+cp -r /ctx/files/base/. /
+if [[ $ENABLE_DX == "1" ]]; then
+    cp -r /ctx/files/dx/. /
+fi
 
 ### Enable repos
 if [[ $ENABLE_DX == "1" ]]; then
