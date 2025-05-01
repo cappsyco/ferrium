@@ -8,3 +8,5 @@
 - `brew help` | Manage command line packages
 
 **󰊤** [Ferrium GitHub](https://github.com/cappsyco/ferrium)
+
+%KEY_WARN%
