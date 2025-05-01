@@ -18,7 +18,7 @@ systemctl enable sshd.service
 systemctl enable check-sb-key.service
 
 if [[ $ENABLE_DX == "1" ]]; then
-    systemctl enable ferrium-dx-groups.service
+    #systemctl enable ferrium-dx-groups.service
     systemctl enable podman.socket
     systemctl enable docker.socket
 fi
