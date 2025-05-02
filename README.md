@@ -38,7 +38,7 @@ This OS image is still heavily in flux and isn't suitable for production as chan
 ### Help!
 I mostly have no idea what I'm doing.
 
-### Thanks and Acknowledgements
+## Thanks and Acknowledgements
 They have done all the hard work so we don't have to.
 * [Universal Blue](https://universal-blue.org/) - We stand on the shoulders of giants...
 * [Fedora](https://fedoraproject.org/) - ...and they stand on another giant's shoulders
