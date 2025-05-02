@@ -37,3 +37,11 @@ This OS image is still heavily in flux and isn't suitable for production as chan
 
 ### Help!
 I mostly have no idea what I'm doing.
+
+### Thanks and Acknowledgements
+They have done all the hard work so we don't have to.
+* [Universal Blue](https://universal-blue.org/) - We stand on the shoulders of giants...
+* [Fedora](https://fedoraproject.org/) - ...and they stand on another giant's shoulders
+* [System76 and their COSMIC desktop environment](https://system76.com/cosmic/) - Your next home
+* [Ryan Brue](https://codeberg.org/ryanabx) - Fedora COSMIC maintainer
+* [Default 'Crab Nebula' Wallpaper from NASA / STScl](https://webbtelescope.org/copyright)
