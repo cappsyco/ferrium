@@ -15,7 +15,6 @@ dnf5 -y copr disable che/nerd-fonts
 ### Services
 systemctl --global preset-all
 systemctl enable sshd.service
-systemctl enable check-sb-key.service
 
 if [[ $ENABLE_DX == "1" ]]; then
     systemctl enable ferrium-dx-groups.service
