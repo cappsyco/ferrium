@@ -32,6 +32,7 @@ dnf5 -y remove ark
 curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz"
 tar -xzf /tmp/starship.tar.gz -C /tmp
 install -c -m 0755 /tmp/starship /usr/bin
+echo 'HOME=/var/home/$USER' >> /etc/bashrc # make sure starship sees the correct home dir for initial user
 echo 'eval "$(starship init bash)"' >> /etc/bashrc
 
 # DX installs
