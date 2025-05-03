@@ -22,6 +22,4 @@ toggle-devmode:
     /usr/libexec/ublue-dx-helper
 
 rebase-signed:
-    #!/usr/bin/env bash
-    IMAGE_BASE_NAME="$(get_config '."image-base-name"' "invalid-image-name")"
-    rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/$IMAGE_BASE_NAME:latest
+    /usr/libexec/ferrium-signed-helper
