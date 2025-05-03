@@ -16,7 +16,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium:latest
 ```
 
 ### From ISO
-Grab the latest ISO, install and then immediately rebase to a signed version of the image to avoid a current bug wit and ensure your updates will work.
+Grab the latest ISO, install and then immediately rebase to a signed version of the image to avoid a current bug and ensure your updates will work.
 Replace `ferrium:latest` with `ferrium-dx:latest` if the dev image is required.
 ```sh
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium:latest
