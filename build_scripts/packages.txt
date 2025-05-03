@@ -24,4 +24,3 @@ jetbrains-mono-fonts-all
 nerd-fonts
 oddjob-mkhomedir
 tailscale
-zen-browser
