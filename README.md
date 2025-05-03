@@ -26,7 +26,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cappsyco/ferrium:latest
 Ferrium currently comes in two flavours.
 
 ### Ferrium Base
-Base image with most of the existing uBlue bells and whistles. Flatpak is setup with the Flathub repo ready to go, and Homebrew is included for your CLI app needs. Everything else is taken care for in the main image updates. [More information about the Universal Blue ecosystem on which we're based](https://universal-blue.org/).
+Base image with most of the existing uBlue bells and whistles. Flatpak is setup with the Flathub repo ready to go, and Homebrew is included for your CLI app needs. Everything else is taken care for in the main image, including Starship prompt, File Roller to handle archives (until a more COSMIC appropriate option becomes available) and Firefox. [More information about the Universal Blue ecosystem on which we're based](https://universal-blue.org/).
 
 ### Ferrium DX
 The developer experience, including tools for container focused dev, the [Zed development environment](https://zed.dev/) and a full suite of tools and dependencies to enable Rust and [COSMIC desktop and app](https://github.com/pop-os/cosmic-epoch) development. This is the main vision for the OS, giving a ready to go environment for all things COSMIC.
@@ -58,5 +58,5 @@ They have done all the hard work so we don't have to.
 * [Universal Blue](https://universal-blue.org/) - We stand on the shoulders of giants...
 * [Fedora](https://fedoraproject.org/) - ...and they stand on another giant's shoulders
 * [System76 and their COSMIC desktop environment](https://system76.com/cosmic/) - Your next home
-* [Ryan Brue](https://codeberg.org/ryanabx) - [Fedora COSMIC](https://fedoraproject.org/atomic-desktops/cosmic/) maintainer
+* [Ryan Brue](https://codeberg.org/ryanabx) - Fedora COSMIC maintainer
 * [Default 'Crab Nebula' Wallpaper from NASA / STScI](https://webbtelescope.org/copyright)
