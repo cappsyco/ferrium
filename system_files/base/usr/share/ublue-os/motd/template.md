@@ -1,8 +1,8 @@
-# 🪐 Welcome to Ferrium! 🦀
+# 🪐🦀 Welcome to Ferrium!
 
 󱋩`%IMAGE_NAME%:%IMAGE_TAG%`
 
-- `ujust rebase-signed` | Get on the signed image and / or fix any update issues you might be having
+- `ujust rebase-signed` | Get the signed image to fix update issues
 - `ujust install-system-flatpaks` | The latest Ferrium Flatpaks
 - `ujust --choose` | Show available commands
 - `ujust toggle-user-motd` | Toggle this banner on/off
