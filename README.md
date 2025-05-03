@@ -32,7 +32,7 @@ Base image with most of the existing uBlue bells and whistles. Flatpak is setup 
 The developer experience, including tools for container focused dev, the [Zed development environment](https://zed.dev/) and a full suite of tools and dependencies to enable Rust and [COSMIC desktop and app](https://github.com/pop-os/cosmic-epoch) development. This is the main vision for the OS, giving a ready to go environment for all things COSMIC.
 
 ## Flatpaks
-After your first rebase or clean install, you have the option to install some default Flatpaks, which we highly recommend. One some bugs have been figured out we'll automatically install these as part of the ISO.
+After your first rebase or clean install, you have the option to install some default Flatpaks, which we highly recommend. Once some bugs have been figured out we'll automatically install these as part of the ISO.
 
 ### Base
 #### Some nice 'Made for COSMIC' apps
