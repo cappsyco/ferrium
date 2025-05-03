@@ -2,6 +2,7 @@
 
 󱋩`%IMAGE_NAME%:%IMAGE_TAG%`
 
+- `ujust rebase-signed` | Get on the signed image and fix any update issues you might be having
 - `ujust install-system-flatpaks` | The latest Ferrium Flatpaks
 - `ujust --choose` | Show available commands
 - `ujust toggle-user-motd` | Toggle this banner on/off
