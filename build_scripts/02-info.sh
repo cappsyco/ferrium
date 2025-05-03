@@ -9,7 +9,7 @@ HOME_URL="https://github.com/cappsyco/ferrium"
 DOCUMENTATION_URL="https://github.com/cappsyco/ferrium"
 SUPPORT_URL="https://github.com/cappsyco/ferrium/issues"
 BUG_SUPPORT_URL="https://github.com/cappsyco/ferrium/issues"
-VERSION_CODENAME=""
+VERSION_CODENAME="pepper"
 
 IMAGE_INFO="/usr/share/ublue-os/image-info.json"
 IMAGE_REF="ostree-image-signed:docker://ghcr.io/$IMAGE_VENDOR/$IMAGE_NAME"
