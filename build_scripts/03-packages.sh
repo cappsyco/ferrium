@@ -26,7 +26,10 @@ fi
 dnf5 -y remove ark
 
 
-### Manual installs
+### Other installs
+
+# Layers
+rpm-ostree install zen-browser
 
 # Starship Shell Prompt
 curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz"
