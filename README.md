@@ -1,7 +1,7 @@
 # Ferrium
 A [Universal Blue](https://universal-blue.org/) and [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) operating system, built around the [COSMIC desktop](https://system76.com/cosmic/).
 
-![Screenshot_2025-05-02_22-00-41](https://github.com/user-attachments/assets/77953440-cbc2-4d79-98ab-b05bfe97a256)
+![Ferrium Screenshot](https://github.com/cappsyco/ferrium/raw/main/screenshot.jpg)
 
 ## Install
 
