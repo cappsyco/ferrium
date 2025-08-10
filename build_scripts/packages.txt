@@ -24,3 +24,4 @@ jetbrains-mono-fonts-all
 nerd-fonts
 oddjob-mkhomedir
 tailscale
+gnome-disk-utility

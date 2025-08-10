@@ -1,3 +1,4 @@
+app/best.ellie.StartupConfiguration
 app/com.jwestall.Forecast/x86_64/stable
 app/dev.edfloreshz.Calculator/x86_64/stable
 app/dev.edfloreshz.CosmicTweaks/x86_64/stable
@@ -8,3 +9,4 @@ app/io.missioncenter.MissionCenter/x86_64/stable
 app/it.mijorus.gearlever/x86_64/stable
 app/org.gnome.Calendar/x86_64/stable
 app/org.gnome.Loupe/x86_64/stable
+app/org.gnome.font-viewer
