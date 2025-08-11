@@ -25,6 +25,8 @@ fi
 # Remove packages
 dnf5 -y remove ark
 
+# Drivers
+dnf5 install kmod-wl akmod-wl
 
 ### Other installs
 
